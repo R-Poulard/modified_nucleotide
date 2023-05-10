@@ -26,7 +26,9 @@ We tried 3 different optimizaiton:
 
 FILE DESCRIPTOR:
 
--noce.csv
+-get_data.py
+script used to get the node.csv datafile (inside node.zip)
+-node.zip
 Dataset used
 -subsampling.py
 script used for each different mode (only little modification needed to be made for each optimization
