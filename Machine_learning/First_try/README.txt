@@ -11,12 +11,13 @@ To predict we use 3 different model (using scklearn)
 -KNearestClassification
 -RandomTreeForst
 
-We use a SearchGridCV each time to find the best parameters (base on f1 criterion) then score using 
+We use a SearchGridCV each time to find the best parameters (base on f1 criterion) then score on the test dataset using :
 -f1_score
 -balanced accuracy score
 -average precision score
 -averege recall score
 
+The train_test splitting is (0,6,0,4).
 
 We tried 3 different optimizaiton:
 [1] sub-sampling
