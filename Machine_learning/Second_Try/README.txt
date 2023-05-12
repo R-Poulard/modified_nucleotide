@@ -13,10 +13,13 @@ reponse: the anwer we want to predict (not kept in the matrice during the ML alg
 at_-1: type of nucleotide that came before him in the sequence ( this node and the "response node" have a B53 edge between them in this specific order).
 at_1: type of nucleotide that came after him in the sequence ( the "response node" and this node have a B53 edge between them in this specific order).
 => the values can be ["A","U","G","C","Mod" (for modified nucleotide), "None" (if their is no neighbor) ]
+they are one_hot encoded during befor being passed to the ML alogrithms.
+
 nb_voisin: number of neighbors (1 or 2 depending on where the nculeotide is)
 
-then we have the datas we obtains in a recurssive way:
+then we have the datas we obtains in a recurssive way.
 Given a distance from the response node X we have:
+
 nb_voisin_at_{X}: the number of neighbor at distance X from the successor side
 nb_voisin_at_-{X}: the number of neighbor at distance X from the predecessor side
 
@@ -42,6 +45,8 @@ script used for each different mode (only little modification needed to be made 
 
 -score_testing2.csv
 scoring result of
+
+IN ML.tar you have the .pickle file for each GridSearchCV sklearn object
 -grid_cv2.pickle
 GridSearchCV (sklearn) object for SVM
 -grid_KN2.pickle
